@@ -1,0 +1,17 @@
+void accelerometer()
+{
+
+  String bad = "bad";
+  analogReadResolution(12); //sets the resolution of the adc values to a 12 bit number, meaning the analogRead values will be between 0 and 4095.
+  //a value of 0 acceleration will return around 2000.
+  x = analogRead(ACCELEROMETERX_PIN); //read accelerometer val x
+  y = analogRead(ACCELEROMETERY_PIN);//read accelerometer val y
+  z = analogRead(ACCELEROMETERZ_PIN);//read accelerometer val z
+
+}
+
+void sound()
+{
+  spl = analogRead(SOUND_PIN); //read sound pressure level.  this value also 2000 at around 0 sound, and will vibrate with high sound pressure magnitudes between 4095 and 0.
+
+}
